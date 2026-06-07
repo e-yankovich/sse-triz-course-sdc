@@ -1,0 +1,1041 @@
+SSE Course Project Report
+
+TickTick: SSE & TRIZ System Improvement
+
+1. Selection of a System or Product for Analysis
+
+System Description
+
+TickTick is a cross-platform digital productivity system designed to support users in managing their daily activities and personal goals. The application integrates multiple productivity functions into a single environment, including task lists, calendar scheduling, reminders, habit tracking, and focus tools such as the Pomodoro timer. It is available on mobile devices, desktop platforms, and as a web application, which allows continuous use across different contexts of a user’s life.
+
+From a systems perspective, TickTick can be classified as a software-based socio-technical system, where the technical components (software features, interfaces, notifications, algorithms) interact closely with human components (user attention, motivation, behavior, and decision-making).
+
+Purpose and Value of the System
+
+The primary purpose of TickTick is to help users:
+
+-   Organize tasks and responsibilities
+
+-   Plan and allocate time more effectively
+
+-   Maintain focus and productivity
+
+-   Build consistent habits over time
+
+The system addresses a common and increasing problem in modern environments: cognitive overload caused by a large number of tasks, deadlines, and distractions. By externalizing planning and reminders, TickTick aims to reduce mental load and support more structured daily behavior.
+
+Why This System Is Worth Studying
+
+TickTick is a suitable and valuable choice for SSE and TRIZ analysis for several reasons:
+
+1.  Clear System Boundaries
+    The system has well-defined inputs (user-created tasks, priorities, deadlines) and outputs (notifications, schedules, completion statistics), making it suitable for structured systems analysis.
+
+2.  Multi-Level Structure (Mono–Bi–Poly-System)
+
+    -   As a mono-system, TickTick can be seen as a basic task list.
+
+    -   As a bi-system, it combines tasks with time management (calendar, deadlines).
+
+    -   As a poly-system, it integrates tasks, habits, focus timers, analytics, and cross-device synchronization.
+
+3.  Presence of System Contradictions
+    TickTick exhibits several inherent contradictions that make it ideal for TRIZ analysis, for example:
+
+    -   The system aims to increase productivity, yet the large number of features can increase cognitive load.
+
+    -   The system provides frequent reminders to support discipline, but these can also interrupt focus.
+
+    -   Users want both flexibility and simplicity, which are often in conflict in feature-rich software.
+
+4.  Real-World Context and Lifecycle
+    TickTick is an actively evolving commercial product in the growth/maturity stage of its lifecycle. Continuous feature expansion introduces both opportunities and systemic inefficiencies, which are important to analyze in SSE.
+
+System Context (Environment and Stakeholders)
+
+The system operates within a complex environment that includes:
+
+-   Users with varying productivity styles and goals
+
+-   Competing productivity tools and platforms
+
+-   Devices with different screen sizes and usage patterns
+
+-   Time pressure, interruptions, and information overload
+
+Key stakeholders include:
+
+-   Individual users seeking better task and time control
+
+-   Developers and product designers optimizing usability and feature sets
+
+-   The broader productivity software ecosystem
+
+Scope of Analysis for This Project
+
+To keep the analysis manageable and aligned with the course requirements, this project will focus on:
+
+-   The user-facing functionality of TickTick
+
+-   Task management, prioritization, and focus support
+
+-   Interactions between features that affect user attention and efficiency
+
+Technical infrastructure, backend architecture, and business models will be considered out of scope.
+
+2. Definition of its Value Proposition
+
+Target User
+
+The primary target user of TickTick is a knowledge worker or student who manages multiple tasks, deadlines, and long-term goals simultaneously and experiences difficulty maintaining focus and structure in daily work.
+
+This user typically:
+
+-   Works or studies in a digitally saturated environment
+
+-   Switches frequently between tasks
+
+-   Relies on self-management rather than external supervision
+
+-   Values productivity, clarity, and a sense of progress
+
+User Jobs (Jobs-to-Be-Done)
+
+Based on the Jobs-to-Be-Done framework, the core user jobs can be categorized as follows:
+
+Functional Jobs
+
+-   Organize tasks and responsibilities in one place
+
+-   Prioritize tasks based on urgency and importance
+
+-   Plan daily and weekly schedules
+
+-   Remember deadlines and recurring obligations
+
+-   Track progress on tasks and habits
+
+Emotional Jobs
+
+-   Feel in control of workload
+
+-   Reduce anxiety related to forgetting tasks
+
+-   Maintain motivation and focus
+
+-   Experience satisfaction from task completion
+
+Social Jobs
+
+-   Appear reliable and organized (meeting deadlines, commitments)
+
+-   Maintain consistency in work or study routines
+
+User Pains
+
+The key frustrations and difficulties faced by the user include:
+
+-   Feeling overwhelmed by a large number of tasks
+
+-   Forgetting deadlines or important commitments
+
+-   Difficulty deciding what to work on next
+
+-   Frequent distractions and interruptions
+
+-   Lack of motivation to start or complete tasks
+
+-   Fragmentation across multiple productivity tools
+
+-   Mental fatigue from constant planning and remembering
+
+These pains directly reduce productivity and increase cognitive load.
+
+User Gains
+
+Desired outcomes and gains include:
+
+-   Clear overview of tasks and priorities
+
+-   Reduced mental load through externalized planning
+
+-   Improved focus and time awareness
+
+-   A sense of accomplishment and visible progress
+
+-   Better balance between short-term tasks and long-term goals
+
+-   Consistent habit formation and self-discipline
+
+Product Features as Pain Relievers and Gain Creators
+
+Using the mapping logic, TickTick’s features can be connected to user pains and gains:
+
+Pain Relievers
+
+-   Task lists with priorities and due dates reduce overwhelm
+
+-   Reminders and notifications prevent forgotten deadlines
+
+-   Recurring tasks reduce the need for repetitive planning
+
+-   Calendar integration minimizes scheduling conflicts
+
+-   Smart lists and filters reduce decision fatigue
+
+Gain Creators
+
+-   Pomodoro timer supports sustained focus
+
+-   Habit tracking encourages consistency and self-improvement
+
+-   Progress statistics and completion indicators increase motivation
+
+-   Cross-device synchronization enables seamless use across contexts
+
+-   Unified system reduces fragmentation across tools
+
+Value Proposition Statement
+
+Based on the analysis above, the value proposition of TickTick can be formulated as follows:
+
+TickTick helps busy individuals manage their tasks and time more effectively by centralizing planning, prioritization, and focus support in one system, resulting in reduced cognitive overload, improved productivity, and a stronger sense of control over daily work—without relying on multiple disconnected tools.
+
+Summary of Value Delivered
+
+In systems terms, TickTick delivers value by:
+
+-   Reducing system entropy (less chaos in task management)
+
+-   Externalizing cognitive effort into a structured digital system
+
+-   Supporting both execution and motivation, not just planning
+
+3. Development of the System Operator Model (Nine-Windows)
+
+The System Operator model (also known as TRIZ Nine-Windows) is used to analyze a system across different levels and time horizons. It allows us to:
+
+-   Understand the internal structure of the system (sub-system)
+
+-   Analyze the system as a whole
+
+-   See how it interacts with and depends on its environment (super-system)
+
+-   Identify evolution trends, constraints, and future requirements
+
+System Definition (Reference Point)
+
+System: TickTick — task and time management application
+Time reference (Present): Current commercially available version used by individual users
+
+Nine-Windows Analysis of TickTick
+
+1. Past – Sub-System
+
+Earlier internal components were simpler and more limited:
+
+-   Basic task list functionality
+
+-   Manual priority setting
+
+-   Simple reminders
+
+-   Limited analytics or feedback mechanisms
+
+These components focused mainly on task recording, not behavior or focus.
+
+2. Past – System
+
+In the past, TickTick (or similar task managers) functioned mainly as:
+
+-   A digital to-do list
+
+-   Replacement for paper planners
+
+-   Tool for remembering tasks rather than managing attention
+
+The system solved memory problems, but not deeper productivity or focus issues.
+
+3. Past – Super-System
+
+The system operated within a simpler environment:
+
+-   Fewer digital distractions
+
+-   Less integration with calendars and other apps
+
+-   Productivity relied more on user discipline than system support
+
+Stakeholders were mainly individual users with basic planning needs.
+
+4. Present – Sub-System
+
+Current internal elements include:
+
+-   Task lists with priorities and tags
+
+-   Smart lists and filters
+
+-   Calendar integration
+
+-   Pomodoro timer
+
+-   Habit tracking
+
+-   Notifications and reminders
+
+-   Progress statistics
+
+The sub-system has become feature-rich and modular, increasing both capability and complexity.
+
+5. Present – System
+
+Today, TickTick functions as:
+
+-   An integrated productivity platform
+
+-   A tool for task management, time management, and focus support
+
+-   A behavior-support system, not just a planner
+
+The system now actively influences how users work, not just what they remember.
+
+6. Present – Super-System
+
+The current super-system includes:
+
+-   Digital work/study environments
+
+-   Smartphones, laptops, and cloud ecosystems
+
+-   High information load and frequent interruptions
+
+-   Competing productivity tools
+
+-   Social and organizational expectations of availability and responsiveness
+
+New stakeholders appear here: platform ecosystems, workplaces, educational contexts.
+
+7. Future – Sub-System
+
+Potential evolution of internal components may include:
+
+-   AI-assisted task prioritization
+
+-   Adaptive reminders based on user behavior
+
+-   Context-aware focus modes
+
+-   Automation of recurring planning decisions
+
+Sub-systems may shift from user-driven input to system-driven support.
+
+8. Future – System
+
+In the future, TickTick could evolve into:
+
+-   An intelligent personal productivity assistant
+
+-   A system that predicts workload and adjusts task flow
+
+-   A proactive focus-management system rather than a reactive tool
+
+The system role shifts from manager to advisor.
+
+9. Future – Super-System
+
+Future operating environment may involve:
+
+-   Deeper integration with work platforms and AI ecosystems
+
+-   Increased concern for mental health and digital well-being
+
+-   Regulation or norms around attention management
+
+-   Collaboration with other systems (calendars, communication tools)
+
+The system may become part of a broader personal cognitive support ecosystem.
+
+4. Building the Functional Model (Including Negative Functions)
+
+Purpose of the Functional Model
+
+A functional model describes what the system does, not how it is technically implemented.
+Its goal is to:
+
+-   Represent the system as a set of interacting functions
+
+-   Show the transformation of the process object from initial state to goal state
+
+-   Identify negative functions (inefficiencies, harmful effects, bottlenecks)
+
+According to SSE and TRIZ principles, every system produces both useful and harmful effects, and improvement begins with making these effects explicit.
+
+Process Object and Main Function
+
+User tasks and user attention
+
+Initial State
+
+-   Tasks are unorganized
+
+-   Priorities are unclear
+
+-   User attention is fragmented
+
+Goal State
+
+-   Tasks are structured and prioritized
+
+-   User knows what to do next
+
+-   Attention is focused on execution
+
+Main Function of the System
+
+Transform an unstructured set of user tasks into an actionable, prioritized, and time-managed workflow.
+
+Functional Decomposition of TickTick
+
+Primary Functional Chain (Positive Functions)
+
+1.  Capture tasks
+
+    -   User inputs tasks, ideas, or obligations
+
+2.  Store and structure tasks
+
+    -   Tasks are organized with dates, priorities, tags
+
+3.  Plan tasks in time
+
+    -   Tasks are scheduled via calendar and deadlines
+
+4.  Remind the user
+
+    -   Notifications prompt action
+
+5.  Support execution
+
+    -   Pomodoro timer and focus tools assist task completion
+
+6.  Track progress
+
+    -   Completed tasks and statistics provide feedback
+
+This sequence represents the core functional flow of the system.
+
+Supporting and Control Functions
+
+-   Synchronize tasks across devices
+
+-   Filter and sort tasks dynamically
+
+-   Provide visual feedback (lists, calendars, stats)
+
+These functions enhance usability but also introduce complexity.
+
+Identification of Negative Functions
+
+Negative functions are harmful effects or inefficiencies produced by the system while performing useful functions.
+
+Key Negative Functions in TickTick
+
+1.  Over-complex task input
+
+    -   Too many fields (priority, tags, dates)
+        → Negative effect: User friction at task capture stage
+
+2.  Cognitive overload from feature density
+
+    -   Many views, lists, and options
+        → Negative effect: User confusion, decision fatigue
+
+3.  Interruptive notifications
+
+    -   Frequent reminders and alerts
+        → Negative effect: Breaks focus instead of supporting it
+
+4.  Planning overhead
+
+    -   Excessive time spent organizing instead of executing
+        → Negative effect: Reduced real productivity
+
+5.  Information noise
+
+    -   Too many tasks visible at once
+        → Negative effect: Stress and avoidance behavior
+
+These negative functions do not mean the system is “bad” — they are natural side effects of increasing system complexity.
+
+Functional Model Insight
+
+From a functional perspective:
+
+-   The system successfully supports planning and execution
+
+-   However, several functions unintentionally harm the same objective they aim to support
+
+-   This reveals system-level contradictions, such as:
+
+    -   More features → better support but more cognitive load
+
+    -   More reminders → better memory but worse focus
+
+These insights directly prepare the ground for TRIZ contradiction analysis in the next step.
+
+Functional Analysis Table 
+
+  -----------------------------------------------------------------------------------------------------------------
+  System Function                Negative Effect / Bottleneck           Effect on the System
+  ------------------------------ -------------------------------------- -------------------------------------------
+  Capture tasks                  Complex input (many fields, options)   User friction reduces task capture rate
+
+  Structure & prioritize tasks   Too many priorities, tags, and views   Decision fatigue and cognitive overload
+
+  Plan tasks in time             Excessive planning effort              Delayed execution, reduced productivity
+
+  Remind user                    Frequent notifications                 Interrupts focus and deep work
+
+  Support execution (Pomodoro)   Rigid time blocks                      Reduced flexibility for creative tasks
+
+  Track progress                 Overemphasis on metrics                Stress and pressure instead of motivation
+  -----------------------------------------------------------------------------------------------------------------
+
+5. Formulating Functional and Non-Functional System Requirements
+
+The goal of this step is to translate the insights from:
+
+-   the value proposition,
+
+-   the functional model, and
+
+-   the identified negative effects
+
+into a clear and testable set of system requirements.
+
+According to SSE principles, functional requirements (FRs) describe what the system must do, while non-functional requirements (NFRs) define how well the system must perform these functions.
+Negative functions and bottlenecks identified earlier directly inform improvement-oriented requirements.
+
+Functional Requirements (FRs)
+
+Functional requirements are derived from the core functions in the functional model and the user jobs identified earlier.
+
+FR1. Task Capture
+
+-   The system shall allow users to quickly capture tasks with minimal mandatory input.
+
+FR2. Task Structuring and Prioritization
+
+-   The system shall enable users to organize tasks using priorities, due dates, and categories.
+
+FR3. Time Planning
+
+-   The system shall support scheduling tasks in time through calendar integration and deadlines.
+
+FR4. Reminder and Notification Management
+
+-   The system shall notify users about upcoming tasks and deadlines.
+
+FR5. Execution Support
+
+-   The system shall provide focus-support mechanisms (e.g., Pomodoro timer) to assist task execution.
+
+FR6. Progress Tracking
+
+-   The system shall track task completion and present progress feedback to the user.
+
+FR7. Cross-Device Synchronization
+
+-   The system shall synchronize tasks and user data across all supported devices.
+
+These functional requirements ensure that the system delivers its core value proposition: transforming unstructured tasks into an actionable workflow.
+
+Non-Functional Requirements (NFRs)
+
+Non-functional requirements are derived mainly from:
+
+-   stakeholder expectations,
+
+-   system context),
+
+-   and negative functions / bottlenecks.
+
+They define quality constraints and improvement targets.
+
+Usability & Cognitive Load
+
+NFR1. Simplicity of Task Input
+
+-   The system shall allow task creation with no more than one mandatory field.
+    (Addresses: complex input → user friction)
+
+NFR2. Cognitive Load Control
+
+-   The system shall limit the number of simultaneously visible tasks to reduce cognitive overload.
+    (Addresses: information noise)
+
+NFR3. Learnability
+
+-   A new user shall be able to perform basic task management within 10 minutes without external help.
+
+Focus and Attention Management
+
+NFR4. Non-Interruptive Notifications
+
+-   The system shall support configurable notification modes that minimize interruptions during focus periods.
+    (Addresses: interruptive notifications)
+
+NFR5. Flexible Execution Support
+
+-   Focus tools shall allow flexible session lengths and easy interruption without penalty.
+    (Addresses: rigid Pomodoro structure)
+
+Performance & Reliability
+
+NFR6. System Responsiveness
+
+-   The system shall respond to user interactions within 1 second under normal operating conditions.
+
+NFR7. Data Reliability
+
+-   User tasks and progress data shall not be lost under normal usage conditions.
+
+Trust, Motivation, and Well-being
+
+NFR8. Stress-Aware Feedback
+
+-   Progress feedback shall emphasize positive reinforcement and avoid punitive or stressful metrics.
+    (Addresses: metric-induced stress)
+
+NFR9. User Control
+
+-   Users shall be able to customize levels of automation, reminders, and feedback.
+
+Traceability to Earlier Steps 
+
+  -----------------------------------------------------------------------
+  Earlier Insight                   Reflected in Requirement
+  --------------------------------- -------------------------------------
+  User overload                     NFR1, NFR2
+
+  Interruptive reminders            NFR4
+
+  Planning overhead                 FR1, NFR1
+
+  Need for focus                    FR5, NFR4
+
+  Motivation vs stress              FR6, NFR8
+  -----------------------------------------------------------------------
+
+This demonstrates a clear analytical chain:
+
+Value → Functions → Negative Effects → Requirements
+
+6. Detecting Several Contradictions in the Requirements
+
+The purpose of this step is to identify key contradictions within the system requirements.
+In TRIZ terms, a contradiction occurs when:
+
+-   improving one requirement or system characteristic
+
+-   inevitably worsens another
+
+These contradictions explain why simple optimization is insufficient and why inventive solutions are required.
+
+Contradiction 1: Feature Richness vs. Cognitive Load
+
+IF the system provides many task attributes, views, and configuration options,
+THEN (+) it satisfies functional requirements for flexibility and advanced task management (FR2, FR3),
+BUT (–) it increases cognitive load and decision fatigue, violating usability and cognitive load requirements (NFR1, NFR2).
+
+Type: Usability / Complexity contradiction
+Core tension: Flexibility ↔ Simplicity
+
+Contradiction 2: Reminders vs. Focus Preservation
+
+IF the system sends frequent notifications and reminders,
+THEN (+) it improves reliability and prevents missed deadlines (FR4),
+BUT (–) it interrupts deep work and reduces user focus, conflicting with focus and attention requirements (NFR4).
+
+Type: Attention management contradiction
+Core tension: Reliability ↔ Concentration
+
+Contradiction 3: Structured Execution vs. User Flexibility
+
+IF the system enforces structured focus sessions (e.g., fixed Pomodoro cycles),
+THEN (+) it supports sustained concentration and task execution (FR5),
+BUT (–) it reduces flexibility and may increase stress for users with non-linear or creative workflows, conflicting with adaptability and well-being requirements (NFR5, NFR8).
+
+Type: Control vs. autonomy contradiction
+Core tension: Discipline ↔ Freedom
+
+Contradiction 4: Motivation vs. Psychological Well-being
+
+IF the system emphasizes progress metrics and completion statistics,
+THEN (+) it increases motivation and visibility of progress (FR6),
+BUT (–) it may create pressure and stress, violating emotional well-being requirements (NFR8).
+
+Summary of Identified Contradictions
+
+  -----------------------------------------------------------------------
+  Contradiction                     Improves          Worsens
+  --------------------------------- ----------------- -------------------
+  Feature richness                  Functionality     Cognitive load
+
+  Frequent reminders                Reliability       Focus
+
+  Rigid execution structure         Discipline        Flexibility
+
+  Metrics emphasis                  Motivation        Well-being
+  -----------------------------------------------------------------------
+
+Why These Contradictions Matter (SSE & TRIZ Perspective)
+
+-   They cannot be solved by trade-offs alone without losing value
+
+-   Each contradiction points to:
+
+    -   a design deadlock
+
+    -   a need for inventive separation or transformation
+
+-   These contradictions directly define the problem space for TRIZ solution generation
+
+In other words:
+
+The contradictions explain why the current system produces negative functions despite fulfilling its requirements.
+
+7. Selecting One Contradiction and Transforming It into a Contradiction in Property
+
+Reminders vs. Focus Preservation
+
+This contradiction was selected because:
+
+-   it directly affects the core value proposition (productivity & focus),
+
+-   it is rooted in everyday user experience,
+
+-   resolving it would significantly reduce negative system effects without sacrificing functionality.
+
+Identifying the Object and the Property
+
+Object - Notification / Reminder mechanism
+
+This is the concrete system element that causes both the positive and negative effects.
+
+Conflicting Property - Interruptiveness (or Intrusiveness) of notifications
+
+This single property is pulled in two opposite directions.
+
+Formulation of the Property (Physical) Contradiction
+
+The interruptiveness of the notification system must be high to ensure the user notices tasks and deadlines,
+AND simultaneously must be low to preserve user focus and avoid interruptions during deep work.
+
+Or, in a more compact form:
+
+The notification system must be interruptive and non-interruptive at the same time.
+
+Why This Is a True Physical (Property) Contradiction
+
+-   One object: the notification system
+
+-   One property: level of interruptiveness
+
+-   Two opposite required values:
+
+    -   High interruptiveness → reliability
+
+    -   Low interruptiveness → focus
+
+This satisfies the formal TRIZ definition of a physical contradiction, not just a trade-off.
+
+8. Generating an Idea for Solving the Contradiction Using TRIZ Tools
+
+Mapping to TRIZ Contradiction Matrix
+
+-   Improving parameter:
+    Reliability / task awareness
+
+-   Worsening parameter:
+    Cognitive load / complexity of control / loss of focus
+
+Based on this mapping, the TRIZ Contradiction Matrix suggests the following relevant Inventive Principles:
+
+-   Principle 15 – Dynamization
+
+-   Principle 10 – Preliminary Action
+
+-   Principle 1 – Segmentation
+
+Inventive Solution Concept
+
+Context-Aware Adaptive Notification System
+
+Core Idea
+
+The notification system dynamically changes its level of interruptiveness depending on the user’s current context, instead of being permanently interruptive or non-interruptive.
+
+This allows the same system element (notification mechanism) to satisfy both opposite values of the same property, under different conditions.
+
+Application of TRIZ Inventive Principles
+
+Principle 15 – Dynamization
+
+The notification system is no longer static. Its:
+
+-   intensity,
+
+-   timing,
+
+-   and modality (sound / visual / haptic)
+
+are dynamically adjusted in real time based on:
+
+-   user behavior,
+
+-   task state,
+
+-   focus mode status.
+
+Principle 1 – Segmentation
+
+Notifications are divided into different delivery modes:
+
+-   Interruptive notifications for critical or urgent tasks,
+
+-   Non-interruptive notifications during focus periods.
+
+Principle 10 – Preliminary Action
+
+The system uses existing contextual information in advance (focus mode, calendar state, task urgency) to determine how and when notifications should be delivered.
+
+How the Contradiction Is Resolved
+
+Separation in Condition
+
+-   IF the user is in a focus state (Pomodoro session, calendar “busy” state, high task engagement),
+    → notifications become non-interruptive (silent, visual-only, queued).
+
+-   IF the user is not in a focus state (idle time, break, task completion),
+    → notifications become interruptive (sound, vibration, pop-up).
+
+Thus:
+
+-   High interruptiveness when awareness is needed
+
+-   Low interruptiveness when focus must be preserved
+
+✔ Same object
+✔ Same property
+✔ Different conditions
+
+Separation in Time
+
+-   Interruptive notifications are delivered after focus sessions end
+
+-   During focus time, notifications are queued
+
+-   A summarized notification batch is shown at transition points (e.g., end of Pomodoro)
+
+This avoids interruptions at the wrong time, not permanently.
+
+Ideal Final Result (IFR)
+
+The user never misses important tasks and is never distracted, without consciously managing notifications.
+
+In the ideal case:
+
+-   The system itself decides when and how to notify,
+
+-   No additional user effort is required,
+
+-   No extra features are added — only smarter use of existing ones.
+
+Resources Used (TRIZ Resource Thinking)
+
+The solution relies only on existing system resources:
+
+-   Pomodoro timer state
+
+-   Task deadlines
+
+-   Calendar availability
+
+-   User interaction patterns
+
+✔ No new hardware
+✔ No new complex UI
+✔ No external systems
+
+This follows the TRIZ principle of using available resources before adding new ones.
+
+9. Updating the Functional Model Based on the Solution Idea
+
+Purpose of This Step
+
+The purpose of this step is to update the functional model of the system after applying the TRIZ-based solution developed in Step 8.
+The updated model represents the System TO-BE, demonstrating how the previously identified negative function is eliminated or mitigated.
+
+This step validates that the proposed solution:
+
+-   integrates into the system architecture,
+
+-   changes system behavior,
+
+-   and resolves the original contradiction.
+
+Reference: Original Functional Model (AS-IS)
+
+In the original functional model (Step 4), the system performed the following key functions:
+
+1.  Capture tasks
+
+2.  Structure and prioritize tasks
+
+3.  Plan tasks in time
+
+4.  Remind user
+
+5.  Support execution
+
+6.  Track progress
+
+Identified Negative Function (AS-IS)
+
+-   Function: Remind user
+
+-   Negative effect: Frequent notifications interrupt focus and deep work
+
+This negative function directly caused the contradiction between reliability and focus preservation.
+
+Integration of the Solution Idea
+
+From Step 8, the selected solution was:
+
+Context-Aware Adaptive Notification System
+
+This solution modifies how the “Remind user” function is performed, without removing it.
+
+Updated Functional Model (TO-BE)
+
+Key Change in System Functionality
+
+The original function “Remind user” is replaced by a refined function:
+
+Adapt notification behavior based on user context
+
+This new function dynamically adjusts notification interruptiveness using:
+
+-   focus mode state,
+
+-   task urgency,
+
+-   timing conditions.
+
+Updated Functional Flow (TO-BE)
+
+1.  Capture tasks
+
+2.  Structure and prioritize tasks
+
+3.  Plan tasks in time
+
+4.  Detect user context (focus / non-focus) ← new function
+
+5.  Deliver adaptive notification ← modified function
+
+6.  Support execution
+
+7.  Track progress
+
+Comparison: AS-IS vs. TO-BE Functional Model
+
+  ---------------------------------------------------------------------------------
+  Aspect              AS-IS Model            TO-BE Model
+  ------------------- ---------------------- --------------------------------------
+  Reminder function   Static notifications   Context-aware adaptive notifications
+
+  Interruptiveness    Always interruptive    Conditional interruptiveness
+
+  Effect on focus     Focus disruption       Focus preserved
+
+  Negative function   Present                Eliminated / mitigated
+  ---------------------------------------------------------------------------------
+
+How the Negative Function Is Resolved
+
+-   Before:
+    Notifications were delivered immediately and uniformly, causing interruptions during focus periods.
+
+-   After:
+    Notifications are:
+
+    -   delayed during focus sessions,
+
+    -   delivered interruptively only when necessary,
+
+    -   summarized at appropriate transition points.
+
+As a result, the negative effect “interrupts focus” is no longer produced by the reminder function.
+
+✔ Negative function removed
+✔ Contradiction resolved
+✔ System effectiveness improved
+
+System-Level Impact of the Updated Model
+
+The updated functional structure:
+
+-   preserves all useful functions,
+
+-   eliminates a key harmful effect,
+
+-   aligns with both functional and non-functional requirements,
+
+-   increases overall system performance and user satisfaction.
+
+In TRIZ terms, the system moves closer to the Ideal Final Result, where:
+
+reminders support the user without demanding attention unnecessarily.
+
+Step 9 Outcome Summary
+
+-   A System TO-BE functional model has been defined
+
+-   The TRIZ solution is fully integrated into system functionality
+
+-   The original contradiction is resolved at the functional level
+
+-   The system now delivers value without the earlier negative side effect
+
+Conclusion: System Improvement through SSE & TRIZ
+
+What was achieved
+
+-   Identified a critical system contradiction between reliability and focus
+
+-   Transformed it into a physical contradiction using TRIZ
+
+-   Resolved it without compromise through separation principles
+
+How the system was improved
+
+-   Replaced static reminders with context-aware adaptive notifications
+
+-   Eliminated the negative function of focus interruption
+
+-   Preserved all core system functionality
+
+Why this matters
+
+-   Improved user focus and task awareness simultaneously
+
+-   Reduced cognitive load without reducing functionality
+
+-   Moved the system from AS-IS to a more balanced TO-BE state
+
+Key lesson learned
+
+System-level contradictions cannot be solved by optimization alone — they require inventive, structured thinking.
